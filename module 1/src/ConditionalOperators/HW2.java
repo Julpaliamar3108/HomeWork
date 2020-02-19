@@ -235,51 +235,59 @@ public class HW2 {
                 Scanner scan = new Scanner(System.in);
                 System.out.println("Введите число");
                 int num = scan.nextInt();
-
-                for (int i = 1; i <= num; i++) {
-                    System.out.println(i + "");
-                }
-                int k = 0;
-                for (int i = 1; i <= num; i++) {
-                    k = k + i;
-                }
-                System.out.println(k);
-            }
-        }
-
-        public static class task14 {
-            public static void main(String[] args) {
-                int num = 356;
                 int sum = 0;
-                int mult = 1;
-                int eachNumber;
-                eachNumber = num % 10;
-                sum = sum + eachNumber;
-                mult = mult * eachNumber;
-                num = num / 10;
-                eachNumber = num % 10;
-                sum = sum + eachNumber;
-                mult = mult * eachNumber;
-                num = num / 10;
-                eachNumber = num % 10;
-                sum = sum + eachNumber;
-                mult = mult * eachNumber;
+                boolean number = true;
+                for (int i = 2; i <= num; i++) {
+                    if (num % i != 0) {
+
+                    }
+                    sum = sum + i;
+                    System.out.println(i + "");
+                   // System.out.println(sum);
+                    //int k = 0;
+                    //for (int l = 1; l <= num; i++) {
+                    //k = k + i;
+                    //}
+                    //System.out.println(k);
+                }
                 System.out.println(sum);
-                System.out.println(mult);
             }
         }
 
-        public static class task15 {
-            public static void main(String[] args) {
-                int n = 1;
-                while (n*n <= 45){
-                    System.out.println(n*n + "");
-                    n++;
+            public static class task14 {
+                public static void main(String[] args) {
+                    int num = 123;
+                    int sum = 0;
+                    int mult = 1;
+                    int eachNumber;
+                    eachNumber = num % 10;
+                    sum = sum + eachNumber;
+                    mult = mult * eachNumber;
+                    num = num / 10;
+                    eachNumber = num % 10;
+                    sum = sum + eachNumber;
+                    mult = mult * eachNumber;
+                    num = num / 10;
+                    eachNumber = num % 10;
+                    sum = sum + eachNumber;
+                    mult = mult * eachNumber;
+                    System.out.println(sum);
+                    System.out.println(mult);
+                }
+            }
+
+            public static class task15 {
+                public static void main(String[] args) {
+                    int n = 1;
+                    while (n * n <= 45) {
+                        System.out.println(n * n + "");
+                        n++;
+                    }
                 }
             }
         }
     }
-}
+
 
 
 
