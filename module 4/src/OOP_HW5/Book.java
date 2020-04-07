@@ -9,7 +9,6 @@ public class Book {
     private String bindingType;
     private int price;
 
-
     public Book(String bookName, String author, String publishingHouse, int year, int pages, String bindingType, int price) {
         this.bookName = bookName;
         this.author = author;
@@ -36,8 +35,7 @@ public class Book {
     public int getYear(){
         return year;
     }
-
 }
 
 
-//
+

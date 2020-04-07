@@ -30,6 +30,7 @@ public class Library {
         }
     }
 
+
     public void searchByPublishingHouse() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введите издательство: ");
@@ -45,6 +46,7 @@ public class Library {
             System.out.println("Книги этого изательства отсутствуют в нашей библиотеке");
         }
     }
+
 
     public void searchByYear(){
         Scanner scan = new Scanner(System.in);
