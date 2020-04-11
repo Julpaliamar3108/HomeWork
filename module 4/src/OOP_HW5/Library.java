@@ -16,11 +16,11 @@ public class Library {
 
     public void searchByAuthor() {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Введите автора: ");
+        System.out.println("Введите фамилию автора: ");
         String author = scan.nextLine();
         int count = 0;
         for (int i = 0; i < books.length; i++) {
-            if (books[i].getAuthor().equals(author)) {
+            if (books[i].getAuthorByLastName().equals(author)) {
                 System.out.println(books[i].toString());
                 count++;
             }
@@ -29,7 +29,6 @@ public class Library {
             System.out.println("Книги этого автора отсутствуют в нашей библиотеке");
         }
     }
-
 
     public void searchByPublishingHouse() {
         Scanner scan = new Scanner(System.in);
@@ -50,17 +49,19 @@ public class Library {
 
     public void searchByYear(){
         Scanner scan = new Scanner(System.in);
-        System.out.println("Введите год: ");
-        int year = scan.nextInt();
+        System.out.println("Книги с какого года выпуска Вам интересны?");
+        int firstYear = scan.nextInt();
+        System.out.println("Книги по какой год выпуска Вам интересны?");
+        int secondYear = scan.nextInt();
         int count = 0;
         for (int i = 0; i < books.length; i++) {
-            if (books[i].getYear() >= year){
+            if (firstYear <= books[i].getYear() && books[i].getYear()<= secondYear) {
                 System.out.println(books[i].toString());
-                count ++;
+                count++;
             }
         }
         if (count == 0) {
-            System.out.println("В библиотеке нет книг, опубликованных после " + year + " года");
-        }
+            System.out.println("В библиотеке нет книг, опубликованных в период с " + firstYear + " по" + secondYear);
+       }
     }
 }

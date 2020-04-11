@@ -21,15 +21,21 @@ public class Book {
 
     @Override
     public String toString() {
-        return "BookName: " + bookName + "; Author: " + author + "; PublishingHouse: " + publishingHouse + "; Year: " + year + "; BindingType: " + bindingType + "; Price: " + price;
+        return "BookName: " + bookName + ";" + '\n' +
+                " Author: " + author +  ";" + '\n' +
+                " PublishingHouse: " + publishingHouse + ";" + '\n' +
+                " Year: " + year + ";" + '\n' +
+                " BindingType: " + bindingType + ";" + '\n' +
+                " Price: " + price;
     }
 
     public String getPublishingHouse(){
         return  publishingHouse;
     }
 
-    public String getAuthor(){
-        return author;
+    public String getAuthorByLastName() {
+        String[] authorName = author.split(" ");
+        return authorName[1];
     }
 
     public int getYear(){
