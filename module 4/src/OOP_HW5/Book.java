@@ -33,9 +33,8 @@ public class Book {
         return  publishingHouse;
     }
 
-    public String getAuthorByLastName() {
-        String[] authorName = author.split(" ");
-        return authorName[1];
+    public String getAuthor() {
+        return author;
     }
 
     public int getYear(){

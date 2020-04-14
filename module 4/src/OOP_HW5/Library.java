@@ -20,7 +20,7 @@ public class Library {
         String author = scan.nextLine();
         int count = 0;
         for (int i = 0; i < books.length; i++) {
-            if (books[i].getAuthorByLastName().equals(author)) {
+            if (books[i].getAuthor().contains(author)) {
                 System.out.println(books[i].toString());
                 count++;
             }
@@ -36,7 +36,7 @@ public class Library {
         String house = scan.nextLine();
         int count = 0;
         for (int i = 0; i < books.length; i++) {
-            if (books[i].getPublishingHouse().equals(house)) {
+            if (books[i].getPublishingHouse().contains(house)) {
                 System.out.println(books[i].toString());
                 count++;
             }
