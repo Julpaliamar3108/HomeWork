@@ -2,33 +2,19 @@ package OOP_SHOP;
 
 
 import OOP_SHOP.Departments.AbstractDepartment;
-import OOP_SHOP.Departments.KitchenAppliances;
 import OOP_SHOP.Products.AbstractProduct;
-import OOP_SHOP.Products.Blender;
 
 import java.util.Scanner;
 
 public class Administration {
-    //Department[] departments;
-    //Product[] products;
     ShopAssistant[] shopAssistants;
-
-    Blender[] blenders;
     AbstractDepartment[] departments;
-    //Fridges[] fridges;
-    KitchenAppliances kitchenAppliances;
     AbstractProduct[] products;
 
     public Administration(AbstractDepartment[] departments, AbstractProduct[] products, ShopAssistant[] shopAssistants) {
         this.departments = departments;
         this.products = products;
         this.shopAssistants = shopAssistants;
-
-
-        //this.Products = Products;
-        //this.abstractDepartments = abstractDepartments;
-        //this.fridges = fridges;
-        //this.kitchenAppliances = kitchenAppliances;
     }
 
     public void FindAssistant() {

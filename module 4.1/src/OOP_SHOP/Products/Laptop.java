@@ -11,4 +11,9 @@ public class Laptop extends AbstractProduct {
     public String getDiagonal(){
         return diagonal;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + " Диагональ: " + diagonal;
+    }
 }

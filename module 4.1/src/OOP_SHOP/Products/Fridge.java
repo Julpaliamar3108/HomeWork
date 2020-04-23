@@ -10,4 +10,9 @@ public class Fridge extends AbstractProduct {
      public String getColor(){
          return color;
      }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Цвет: " + color;
+    }
 }

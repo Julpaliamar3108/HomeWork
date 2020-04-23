@@ -26,5 +26,8 @@ public abstract class AbstractProduct implements Product {
         return departmentName;
     }
 
-
+    @Override
+    public String toString() {
+       return productName + ", по цене " + price + "грн.";
+   }
 }

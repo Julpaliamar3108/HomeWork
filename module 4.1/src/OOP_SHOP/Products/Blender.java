@@ -11,4 +11,8 @@ public class Blender extends AbstractProduct {
         return numberOfNuzzles;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + ", количество насадок: " + numberOfNuzzles;
+    }
 }

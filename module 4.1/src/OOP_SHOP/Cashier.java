@@ -1,13 +1,16 @@
 package OOP_SHOP;
 
-import OOP_SHOP.Customer.CustomerWithDiscount;
-import OOP_SHOP.Customer.Customer;
-
 public class Cashier {
-    String name;
+    private String name;
+    public Cashier(){
 
-    public void TakeMoney() {
-        System.out.println("Всего доброго, до свидания!");
     }
 
+    public void TakeMoney() {
+        System.out.println("Спасибо за покупку! Не забудьте при выходе показать охраннику чек");
+    }
+
+    public String getName() {
+        return name;
+    }
 }

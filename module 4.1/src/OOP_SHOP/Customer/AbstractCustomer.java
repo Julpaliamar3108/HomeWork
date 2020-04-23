@@ -1,7 +1,6 @@
 package OOP_SHOP.Customer;
 
 import OOP_SHOP.Interfaces.Customer;
-import OOP_SHOP.Products.AbstractProduct;
 
 public abstract class AbstractCustomer implements Customer {
     private String name;
