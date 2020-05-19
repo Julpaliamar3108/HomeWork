@@ -3,12 +3,12 @@ package Collections;
 
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.io.IOException;
+import java.util.*;
 
 public class First {
-    public void GetNumberOfSymbol(String string,char symbol) throws Exception{
+
+    public void GetNumberOfSymbol(String string, char symbol) throws Exception {
         //записываем строку в файл
         FileWriter collectionFile = new FileWriter("collectionNew.txt");
         collectionFile.write(string);
@@ -25,17 +25,45 @@ public class First {
         for (i = 0; i < str.length(); i++) {
             newSymbols.add(str.charAt(i));
         }
-        for (Character chars :newSymbols) {
-            if(chars == symbol){
+        for (Character chars : newSymbols) {
+            if (chars == symbol) {
                 count++;
             }
-        }//System.out.println("В слове " + str + " символ " + symbol + " встречается " + count +  " раза");
+        }System.out.println(String.format("В строке \"%s\"  символ  \'%s\' встречается %s раз(а)", str, symbol, count));        // результат в консоль
+        // если выводить результат в файл
         FileWriter resultFile = new FileWriter("resultNew.txt");
-        resultFile.write('\n' + "В слове " + str + " символ k встречается " + count +  " раза");
+        resultFile.write(String.format("В строке \"%s\"  символ  \'%s\' встречается %s раз(а)", str, symbol, count)); // запись в файл
         resultFile.close();
-
-
     }
 
 
-}
+    public void getNumberOfEachSymbol(String string) throws IOException {
+        List<Character> allSymbols = new ArrayList<>();
+        int i;
+        List<String> result = new ArrayList<>();
+        int count = 0;
+
+        for (i = 0; i < string.length(); i++) {
+            allSymbols.add(string.charAt(i));
+        }
+        System.out.println(allSymbols);
+
+        for (char char1 : allSymbols) {
+            for (char char2 : allSymbols) {
+                if (char1 == char2) {
+                    ++count;
+                }
+            }
+            result.add(System.lineSeparator() + char1 + " встречается " + count + " раз(а)");
+            count = 0;
+        }
+        Set<String> set = new HashSet<>(result);
+        System.out.println(set);                                             // вывод в консоль
+
+        FileWriter resultFile2 = new FileWriter("result.txt");
+        resultFile2.write(String.valueOf(set));                              // запись в файл
+        resultFile2.close();
+    }
+    }
+
+
