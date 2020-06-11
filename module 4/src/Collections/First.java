@@ -23,10 +23,10 @@ public class First {
         int i;
         int count = 0;
         for (i = 0; i < str.length(); i++) {
-            newSymbols.add(str.charAt(i));
+            newSymbols.add(str.toLowerCase().charAt(i));
         }
         for (Character chars : newSymbols) {
-            if (chars == symbol) {
+            if (chars.equals(symbol)) {
                 count++;
             }
         }System.out.println(String.format("В строке \"%s\"  символ  \'%s\' встречается %s раз(а)", str, symbol, count));        // результат в консоль
@@ -40,7 +40,7 @@ public class First {
     public void getNumberOfEachSymbol(String string) throws IOException {
         List<Character> allSymbols = new ArrayList<>();
         int i;
-        List<String> result = new ArrayList<>();
+        Set<String> result = new HashSet<>();
         int count = 0;
 
         for (i = 0; i < string.length(); i++) {
@@ -57,11 +57,10 @@ public class First {
             result.add(System.lineSeparator() + char1 + " встречается " + count + " раз(а)");
             count = 0;
         }
-        Set<String> set = new HashSet<>(result);
-        System.out.println(set);                                             // вывод в консоль
+        System.out.println(result);                                             // вывод в консоль
 
         FileWriter resultFile2 = new FileWriter("result.txt");
-        resultFile2.write(String.valueOf(set));                              // запись в файл
+        resultFile2.write(String.valueOf(result));                              // запись в файл
         resultFile2.close();
     }
     }
